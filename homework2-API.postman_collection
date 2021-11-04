@@ -1,0 +1,359 @@
+{
+	"info": {
+		"_postman_id": "89798d7f-c945-4f40-9213-eff9230a318e",
+		"name": "homework2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CONTATO",
+			"item": [
+				{
+					"name": "GET / CONTATO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/contatoEntity",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"contatoEntity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET / CONTATO/NUMBER",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/contatoEntity/bynumber?numero=102",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"contatoEntity",
+								"bynumber"
+							],
+							"query": [
+								{
+									"key": "numero",
+									"value": "102"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST / CONTATO/ID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{                \r\n        \"tipoContato\": \"2\",\r\n        \"numero\": \"106\",\r\n        \"descricao\": \"novo contatoEntity para o id um\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/contatoEntity/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"contatoEntity",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT / CONTATO /ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{        \r\n        \"idPessoa\": 2,\r\n        \"tipoContato\": \"2\",\r\n        \"numero\": \"102\",\r\n        \"descricao\": \"ATUALIZANDO CONTATO 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/contatoEntity/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"contatoEntity",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE / contatoEntity",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/contatoEntity/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"contatoEntity",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PESSOA",
+			"item": [
+				{
+					"name": "GET /pessoaEntity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/pessoaEntity/byname?nome=maicon",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pessoaEntity",
+								"byname"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "maicon"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /pessoaEntity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Guilherme Silva\",\r\n    \"dataNascimento\": \"1999-08-24\",\r\n    \"cpf\": \"84691697004\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/pessoaEntity",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pessoaEntity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /pessoaEntity/id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Maicon Gerardi\",\r\n    \"dataNascimento\": \"1991-09-08\",\r\n    \"cpf\": \"12345678910\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/pessoaEntity/9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pessoaEntity",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /pessoaEntity/id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/pessoaEntity/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pessoaEntity",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ENDEREÇO",
+			"item": [
+				{
+					"name": "GET / ENDERECO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/enderecoEntity",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"enderecoEntity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET / ENDERECO / ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/enderecoEntity/1/enderecoEntity",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"enderecoEntity",
+								"1",
+								"enderecoEntity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET / ENDEREDO / ID / PESSOA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/enderecoEntity/1/pessoaEntity",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"enderecoEntity",
+								"1",
+								"pessoaEntity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE / ENDERECO / ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/enderecoEntity/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"enderecoEntity",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT / ENDERECO / ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{        \r\n        \"idPessoa\": 1,\r\n        \"tipo\": \"2\",\r\n        \"logradouro\": \"longradouro\",\r\n        \"numero\": 105,\r\n        \"complemento\": \"null\",\r\n        \"cep\": \"91420612\",\r\n        \"cidade\": \"São Paulo\",\r\n        \"estado\": \"SP\",\r\n        \"pais\": \"Brasil\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/enderecoEntity/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"enderecoEntity",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST / ENDERECO / ID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{        \r\n        \"tipo\": \"2\",\r\n        \"logradouro\": \"longradouro\",\r\n        \"numero\": 105,\r\n        \"complemento\": \"null\",\r\n        \"cep\": \"91420612\",\r\n        \"cidade\": \"São Paulo\",\r\n        \"estado\": \"SP\",\r\n        \"pais\": \"Brasil\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/enderecoEntity/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"enderecoEntity",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
