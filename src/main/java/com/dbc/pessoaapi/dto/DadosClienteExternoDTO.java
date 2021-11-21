@@ -9,13 +9,8 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class DadosPessoaisDTO {
+public class DadosClienteExternoDTO {
     private String nome;
-    private String cpf;
-    private String rg;
-    private String cnh;
-    private String nomeMae;
-    private String nomePai;
-    private String tituloEleitor;
-    private Sexo sexo;
+    private String email;
+
 }
